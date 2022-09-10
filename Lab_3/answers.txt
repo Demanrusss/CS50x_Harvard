@@ -1,0 +1,20 @@
+sort1 uses: bubble sort
+
+How do you know?: real work time of 1) sorted file was 0.817s, than 0.936s, lastly 0.816s;
+                                    2) random file was 8.595s, than 8.328s, lastly 8.039s;
+                                    that's why according to the whole result and
+                                    the knowledge of the huge difference between worstcase and bestcase as (n^2) and (n)
+
+sort2 uses: merge sort
+
+How do you know?: real work time of 1) sorted file was 0.907s, than 0.945s, lastly 1.000s;
+                                    2) random file was 0.907s, than 1.130s, lastly 0.781s;
+                                    that's why according to the whole result (especially using time results of sort3) and
+                                    the knowledge of no difference between worstcase and bestcase as (n log(n)) and (n log(n))
+
+sort3 uses: selection sort
+
+How do you know?: real work time of 1) sorted file was 3.436s, than 3.793s, lastly 3.697s;
+                                    2) random file was 3.695s, than 3.801s, lastly 3.638s;
+                                    that's why according to the whole result (especially using time results of sort2) and
+                                    the knowledge of no difference between worstcase and bestcase as (n^2) and (n^2)
