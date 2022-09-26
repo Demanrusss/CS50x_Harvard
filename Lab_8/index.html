@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                document.querySelector("#button_correct").addEventListener("click", event => {
+                    event.target.style.backgroundColor = "#00ff00";
+                    document.querySelector('#confirmation').innerHTML = "Correct!";
+                });
+
+                document.querySelector("#button_incorrect_1").addEventListener("click", event => {
+                    event.target.style.backgroundColor = "#ff0000";
+                    document.querySelector('#confirmation').innerHTML = "Incorrect!";
+                });
+
+                document.querySelector("#button_incorrect_2").addEventListener("click", event => {
+                    event.target.style.backgroundColor = "#ff0000";
+                    document.querySelector('#confirmation').innerHTML = "Incorrect!";
+                });
+
+                document.querySelector("#button_incorrect_3").addEventListener("click", event => {
+                    event.target.style.backgroundColor = "#ff0000";
+                    document.querySelector('#confirmation').innerHTML = "Incorrect!";
+                });
+
+                document.querySelector("#check_answer").addEventListener("click", event => {
+                    var input = document.querySelector("input").value.toLowerCase();
+                    if (input == "ten" || input == "10")
+                    {
+                        document.querySelector('#confirmation_2').innerHTML = "Correct!";
+                    }
+                    else
+                    {
+                        document.querySelector('#confirmation_2').innerHTML = "Incorrect!";
+                    }
+                });
+            });
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section" class="d-grid gap-2 d-md-block">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <!-- TODO: Add multiple choice question here -->
+                <h3>What are the loop functions in C?</h3>
+                <button id="button_incorrect_1">do...while<br>for<br>while<br>foreach</button>
+                <button id="button_correct">for<br>do...while<br>while</button>
+                <button id="button_incorrect_2">for<br>while<br>foreach</button>
+                <button id="button_incorrect_3">do...while<br>forever<br>while<br>for</button>
+                <p id="confirmation"></p>
+            </div>
+
+            <div class="section" class="d-grid gap-2 d-md-block">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <!-- TODO: Add free response question here -->
+                <h3>How many weeks do we have here in CS50 "Introduction to Computer Science" course?</h3>
+                    <input type="text">
+                    <button id="check_answer" type="submit">Check the answer</button>
+                    <p id="confirmation_2"></p>
+            </div>
+        </div>
+    </body>
+</html>
