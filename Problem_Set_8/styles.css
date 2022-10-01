@@ -1,6 +1,7 @@
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
 }
 html, body {
 	height: 78%;
@@ -16,8 +17,17 @@ html, body {
 	flex: 1 0 auto;
 }
 .footer {
+	padding-top: 0.5vw;
     text-align: center;
 	flex: 0 0 auto;
+}
+
+.navbar-brand {
+	text-decoration: none;
+}
+
+.navbar-brand.active {
+	text-decoration: underline;
 }
 
 @keyframes display {
@@ -76,4 +86,86 @@ img:nth-child(6) {
 }
 img:nth-child(7) {
 	animation-delay: 12s;
+}
+
+.content1 h3 {
+	color: #0000ff;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.content1 table {
+	left: 5vw;
+	width: 90%;
+	position: relative;
+}
+
+.table_class {
+	border-collapse: separate;
+	border-spacing: 0.5vw;
+}
+
+.strong {
+	padding-top: 0.5vw;
+	font-weight: bold;
+	text-align: center;
+}
+
+.table_prices_class {
+	font-weight: bold;
+	text-align: center;
+	border: 4px double #333;
+    border-collapse: separate;
+    width: 90vw;
+	border-spacing: 10vw 1vw;
+}
+
+.table_prices_class td {
+	width: 50%;
+}
+
+.cell_text_to_left {
+	text-align: left;
+}
+
+.cell_text_to_right {
+	text-align: right;
+}
+.table_certificates_class {
+	display: grid;
+	border-collapse: collapse;
+  	min-width: 90%;
+  	grid-template-columns:
+    minmax(150px, 1fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr)
+    minmax(150px, 1.67fr);
+}
+
+.table_certificates_class tr {
+	display: context;
+  	padding: 15px;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+}
+
+.table_certificates_class td {
+	display: context;
+  	padding: 15px;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+  	white-space: nowrap;
+}
+
+.table_certificates_classtd {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #808080;
+}
+
+.table_certificates_class tr:nth-child(even) td {
+	background: #f8f6ff;
 }
