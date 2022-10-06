@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quoted
+{% endblock %}
+
+{% block main %}
+    <h3 align="center">From stock</h3>
+    <table class="quoted_table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Price</th>
+                <th>Symbol</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ stocks_symbol["name"] }}</td>
+                <td>{{ stocks_symbol["price"] }}</td>
+                <td>{{ stocks_symbol["symbol"] }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
