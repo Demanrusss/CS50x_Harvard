@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Report
+{% endblock %}
+
+{% block main %}
+    <h3 align="center">Report</h3>
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">Symbol</th>
+                <th scope="col">Name</th>
+                <th scope="col">Shares</th>
+                <th scope="col">Price</th>
+                <th scope="col">TOTAL</th>
+            </tr>
+        </thead>
+        <tbody class="table-group-divider">
+            {% for transaction in transactions_list %}
+            <tr>
+                <td>{{ transaction["symbol"] }}</td>
+                <td>{{ transaction["name"] }}</td>
+                <td>{{ transaction["Shares"] }}</td>
+                <td>${{ '%0.2f' % transaction["price"] }}</td>
+                <td>${{ '%0.2f' % transaction["Sum"] }}</td>
+            </tr>
+            {% endfor %}
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th scope="col">Cash</th>
+                <td>{{ user_cash }}</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <th scope="col">TOTAL</th>
+                <td>{{ user_total }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

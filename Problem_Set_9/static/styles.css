@@ -28,3 +28,10 @@ nav .navbar-brand .green
     margin-left: auto;
     margin-right: auto;
 }
+
+.form-select {
+    position: relative;
+    width: 15vw;
+    margin-left: auto;
+    margin-right: auto;
+}
