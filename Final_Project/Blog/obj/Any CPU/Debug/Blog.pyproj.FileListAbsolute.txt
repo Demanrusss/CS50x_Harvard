@@ -1,0 +1,2 @@
+C:\Users\User\Desktop\Blog\obj\Any CPU\Debug\Blog.pyproj.SuggestedBindingRedirects.cache
+C:\Users\User\Desktop\Blog\obj\Any CPU\Debug\Blog.pyproj.CoreCompileInputs.cache

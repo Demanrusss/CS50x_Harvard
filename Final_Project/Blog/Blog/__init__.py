@@ -1,7 +1,10 @@
-"""
-The flask application package.
-"""
 from flask import Flask
-app = Flask(__name__)
+from flask_wtf.csrf import CSRFProtect
 
-import Blog.views
+csrf = CSRFProtect()
+
+app = Flask(__name__)
+app.config.from_object('config')
+csrf.init_app(app)
+
+from Blog import views

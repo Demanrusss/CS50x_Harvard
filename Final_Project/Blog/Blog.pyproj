@@ -4,10 +4,10 @@
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>f1935609-5da8-4554-8983-43bed04f675c</ProjectGuid>
+    <ProjectGuid>dd3a90a7-7dc4-40b9-94df-6214916e7a33</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>runserver.py</StartupFile>
+    <StartupFile>app.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -17,6 +17,7 @@
     <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
     <Name>Blog</Name>
     <RootNamespace>Blog</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,46 +28,39 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="runserver.py" />
+    <Compile Include="app.py" />
+    <Compile Include="Blog\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="Blog\__init__.py" />
     <Compile Include="Blog\views.py" />
+    <Compile Include="config.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Blog\" />
     <Folder Include="Blog\static\" />
-    <Folder Include="Blog\static\content\" />
-    <Folder Include="Blog\static\fonts\" />
-    <Folder Include="Blog\static\scripts\" />
     <Folder Include="Blog\templates\" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Blog\templates\login.html" />
     <Content Include="requirements.txt" />
-    <Content Include="Blog\static\content\bootstrap.css" />
-    <Content Include="Blog\static\content\bootstrap.min.css" />
-    <Content Include="Blog\static\content\site.css" />
-    <Content Include="Blog\static\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Blog\static\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="Blog\static\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="Blog\static\fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="Blog\static\scripts\bootstrap.js" />
-    <Content Include="Blog\static\scripts\bootstrap.min.js" />
-    <Content Include="Blog\static\scripts\jquery-1.10.2.intellisense.js" />
-    <Content Include="Blog\static\scripts\jquery-1.10.2.js" />
-    <Content Include="Blog\static\scripts\jquery-1.10.2.min.js" />
-    <Content Include="Blog\static\scripts\jquery-1.10.2.min.map" />
-    <Content Include="Blog\static\scripts\jquery.validate-vsdoc.js" />
-    <Content Include="Blog\static\scripts\jquery.validate.js" />
-    <Content Include="Blog\static\scripts\jquery.validate.min.js" />
-    <Content Include="Blog\static\scripts\jquery.validate.unobtrusive.js" />
-    <Content Include="Blog\static\scripts\jquery.validate.unobtrusive.min.js" />
-    <Content Include="Blog\static\scripts\modernizr-2.6.2.js" />
-    <Content Include="Blog\static\scripts\respond.js" />
-    <Content Include="Blog\static\scripts\respond.min.js" />
-    <Content Include="Blog\static\scripts\_references.js" />
     <Content Include="Blog\templates\about.html" />
     <Content Include="Blog\templates\contact.html" />
     <Content Include="Blog\templates\index.html" />
     <Content Include="Blog\templates\layout.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.9</Version>
+      <Description>env (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
