@@ -29,27 +29,33 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="app.py" />
-    <Compile Include="Blog\forms.py">
+    <Compile Include="app\forms.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Blog\__init__.py" />
-    <Compile Include="Blog\views.py" />
+    <Compile Include="app\models.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\__init__.py" />
+    <Compile Include="app\views.py" />
     <Compile Include="config.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="db_connection.py">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Blog\" />
-    <Folder Include="Blog\static\" />
-    <Folder Include="Blog\templates\" />
+    <Folder Include="app\" />
+    <Folder Include="app\static\" />
+    <Folder Include="app\templates\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Blog\templates\login.html" />
+    <Content Include="app\templates\login.html" />
     <Content Include="requirements.txt" />
-    <Content Include="Blog\templates\about.html" />
-    <Content Include="Blog\templates\contact.html" />
-    <Content Include="Blog\templates\index.html" />
-    <Content Include="Blog\templates\layout.html" />
+    <Content Include="app\templates\about.html" />
+    <Content Include="app\templates\contact.html" />
+    <Content Include="app\templates\index.html" />
+    <Content Include="app\templates\layout.html" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">

@@ -1,5 +1,5 @@
 from os import environ
-from Blog import app
+from app import app
 
 if __name__ == '__main__':
     HOST = environ.get('SERVER_HOST', 'localhost')
