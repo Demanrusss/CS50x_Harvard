@@ -1,4 +1,0 @@
-C:\Users\User\Desktop\Blog\obj\Any CPU\Debug\Blog.pyproj.SuggestedBindingRedirects.cache
-C:\Users\User\Desktop\Blog\obj\Any CPU\Debug\Blog.pyproj.CoreCompileInputs.cache
-D:\Coding\CS50x_Harvard\Final_Project\Blog\obj\Any CPU\Debug\Blog.pyproj.SuggestedBindingRedirects.cache
-D:\Coding\CS50x_Harvard\Final_Project\Blog\obj\Any CPU\Debug\Blog.pyproj.CoreCompileInputs.cache

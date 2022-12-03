@@ -1,13 +1,12 @@
-<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>dd3a90a7-7dc4-40b9-94df-6214916e7a33</ProjectGuid>
+    <ProjectGuid>240c2505-f59e-4175-89f4-958eeae93bed</ProjectGuid>
     <ProjectHome>.</ProjectHome>
     <ProjectTypeGuids>{789894c7-04a9-4a11-a6b5-3f4435165112};{1b580a1a-fdb3-4b32-83e1-6407eb2722e6};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
-    <StartupFile>app.py</StartupFile>
+    <StartupFile>blog.py</StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -28,34 +27,32 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="app.py" />
     <Compile Include="app\forms.py">
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="app\models.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="app\__init__.py" />
-    <Compile Include="app\views.py" />
+    <Compile Include="blog.py" />
+    <Compile Include="app\routes.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="app\__init__.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="config.py">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="db_connection.py">
-      <SubType>Code</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="app\" />
-    <Folder Include="app\static\" />
-    <Folder Include="app\templates\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="app\templates\login.html" />
-    <Content Include="requirements.txt" />
-    <Content Include="app\templates\about.html" />
-    <Content Include="app\templates\contact.html" />
+    <Content Include="app\templates\edit_profile.html" />
     <Content Include="app\templates\index.html" />
-    <Content Include="app\templates\layout.html" />
+    <Content Include="app\templates\login.html" />
+    <Content Include="app\templates\register.html" />
+    <Content Include="app\templates\user.html" />
+    <Content Include="app\templates\_layout.html" />
+    <Content Include="app\templates\_post.html" />
+    <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Interpreter Include="env\">
@@ -67,6 +64,10 @@
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
       <Architecture>X64</Architecture>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="app\" />
+    <Folder Include="app\templates\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Web.targets" />
   <!-- Specify pre- and post-build commands in the BeforeBuild and 
