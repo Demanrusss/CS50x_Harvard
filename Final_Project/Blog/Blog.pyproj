@@ -27,6 +27,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\errors.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\forms.py">
       <SubType>Code</SubType>
     </Compile>
@@ -45,6 +48,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\templates\500.html" />
+    <Content Include="app\templates\404.html" />
     <Content Include="app\templates\edit_profile.html" />
     <Content Include="app\templates\index.html" />
     <Content Include="app\templates\login.html" />
