@@ -24,7 +24,8 @@ def index():
         flash('Your post has been published')
         return redirect(url_for('index'))
     page = request.args.get('page', 1, type = int)
-    posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
+    posts = current_user.followed_posts()\
+        .paginate(page = page, per_page = app.config['POSTS_PER_PAGE'], error_out = False)
     next_page = url_for('index', page = posts.next_num) if posts.has_next else None
     prev_page = url_for('index', page = posts.prev_num) if posts.has_prev else None
     return render_template('index.html', title = 'Home', 
@@ -36,7 +37,7 @@ def index():
 def explore():
     page = request.args.get('page', 1, type = int)
     posts = Post.query.order_by(Post.timestamp.desc())\
-        .paginate(page, app.config['POSTS_PER_PAGE'], False)
+        .paginate(page = page, per_page = app.config['POSTS_PER_PAGE'], error_out = False)
     next_page = url_for('explore', page = posts.next_num) if posts.has_next else None
     prev_page = url_for('explore', page = posts.prev_num) if posts.has_prev else None
     return render_template('index.html', title = 'Explore', 
@@ -85,7 +86,7 @@ def user(username):
     user = User.query.filter_by(username = username).first_or_404()
     page = request.args.get('page', 1, type = int)
     posts = user.posts.order_by(Post.timestamp.desc())\
-        .paginate(page, app.config['POSTS_PER_PAGE'], False)
+        .paginate(page = page, per_page = app.config['POSTS_PER_PAGE'], error_out = False)
     next_page = url_for('user', username = user.username, page = posts.next_num) \
         if posts.has_next else None
     prev_page = url_for('user', username = user.username, page = posts.prev_num) \
@@ -108,7 +109,7 @@ def edit_profile():
         form.about_me.data = current_user.about_me
     return render_template('edit_profile.html', title = 'Edit Profile', form = form)
 
-@app.route('/follow/<username>')
+@app.route('/follow/<username>', methods=['POST'])
 @login_required
 def follow(username):
     user = User.query.filter_by(username = username).first()
@@ -123,7 +124,7 @@ def follow(username):
     flash('Now, You are following {}.'.format(username))
     return redirect(url_for('user', username = username))
 
-@app.route('/unfollow/<username>')
+@app.route('/unfollow/<username>', methods=['POST'])
 @login_required
 def unfollow(username):
     user = User.query.filter_by(username = username).first()
