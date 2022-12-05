@@ -17,6 +17,7 @@
     <Name>Blog</Name>
     <RootNamespace>Blog</RootNamespace>
     <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+    <TestFramework>unittest</TestFramework>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -27,6 +28,9 @@
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="app\email.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\errors.py">
       <SubType>Code</SubType>
     </Compile>
@@ -57,6 +61,7 @@
     <Content Include="app\templates\index.html" />
     <Content Include="app\templates\login.html" />
     <Content Include="app\templates\register.html" />
+    <Content Include="app\templates\reset_password_request.html" />
     <Content Include="app\templates\user.html" />
     <Content Include="app\templates\_layout.html" />
     <Content Include="app\templates\_post.html" />

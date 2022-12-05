@@ -6,6 +6,7 @@ from flask_login import LoginManager
 import logging
 from logging.handlers import SMTPHandler, RotatingFileHandler
 import os
+from flask_mail import Mail
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -13,6 +14,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
+mail = Mail(app)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
@@ -42,3 +44,21 @@ if not app.debug:
     app.logger.info('Blog startup')
 
 from app import routes, models, errors
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                               #
+# In order to test mail.server by python                        #
+#                                                               #
+# $ python -m smtpd -n -c DebuggingServer localhost:8025        #
+# $ export/set(for windows) MAIL_SERVER=localhost               #
+# $ export/set(for windows) MAIL_PORT=8025                      #
+#                                                               #
+# OR                                                            #
+#                                                               #
+# $ export/set(for windows) MAIL_SERVER=smtp.googlemail.com     #
+# $ export/set(for windows) MAIL_PORT=587                       #
+# $ export/set(for windows) MAIL_USE_TLS=1                      #
+# $ export/set(for windows) MAIL_USERNAME=<gmail-username>      #
+# $ export/set(for windows) MAIL_PASSWORD=<gmail-password>      #
+#                                                               #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
