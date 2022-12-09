@@ -101,3 +101,7 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: 'user' is undefined
 2022-12-04 22:16:42,914 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
 2022-12-04 22:26:32,884 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-09 21:23:47,255 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
+2022-12-09 21:24:20,116 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
+2022-12-09 21:26:47,196 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
+2022-12-09 21:31:43,053 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
