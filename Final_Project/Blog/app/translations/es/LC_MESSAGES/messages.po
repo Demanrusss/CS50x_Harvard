@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-11 03:01+0600\n"
+"POT-Creation-Date: 2022-12-12 00:12+0600\n"
 "PO-Revision-Date: 2022-12-11 02:42+0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: es\n"
@@ -38,7 +38,7 @@ msgstr "Contraseña"
 msgid "Remember me"
 msgstr "Recordarme"
 
-#: app/forms.py:11 app/routes.py:66 app/templates/login.html:5
+#: app/forms.py:11 app/routes.py:72 app/templates/login.html:5
 msgid "Sign in"
 msgstr "Entrar"
 
@@ -50,7 +50,7 @@ msgstr "Email"
 msgid "Confirm password"
 msgstr "Confirmar contraseña"
 
-#: app/forms.py:18 app/routes.py:85 app/templates/register.html:5
+#: app/forms.py:18 app/routes.py:91 app/templates/register.html:5
 msgid "Register"
 msgstr "Registrar"
 
@@ -86,68 +86,76 @@ msgstr "Solicitar restablecimiento de contraseña"
 msgid "Set new password"
 msgstr "Establecer nueva contraseña"
 
-#: app/routes.py:28
+#: app/routes.py:34
 msgid "Your post has been published"
 msgstr "Su mensaje ha sido publicado"
 
-#: app/routes.py:35 app/templates/_layout.html:20
+#: app/routes.py:41 app/templates/_layout.html:20
 msgid "Home"
 msgstr "Inicio"
 
-#: app/routes.py:47 app/templates/_layout.html:21
+#: app/routes.py:53 app/templates/_layout.html:21
 msgid "Explore"
 msgstr "Explorar"
 
-#: app/routes.py:59
+#: app/routes.py:65
 msgid "Invalid username or password"
 msgstr "Nombre de usuario o contraseña inválidos"
 
-#: app/routes.py:83
+#: app/routes.py:89
 msgid "Congratulations, you are now a registered user!"
 msgstr "¡Enhorabuena, ya eres un usuario registrado!"
 
-#: app/routes.py:109
+#: app/routes.py:115
 msgid "Your changes have been saved"
 msgstr "Tus cambios han sido guardados"
 
-#: app/routes.py:114 app/templates/edit_profile.html:5
+#: app/routes.py:120 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Editar Perfil"
 
-#: app/routes.py:121 app/routes.py:136
+#: app/routes.py:127 app/routes.py:142
 #, python-format
 msgid "User %(username)s not found"
 msgstr "Usuario %(username)s no encontrado"
 
-#: app/routes.py:124
+#: app/routes.py:130
 msgid "You cannot follow yourself"
 msgstr "No puedes seguirte a ti mismo"
 
-#: app/routes.py:128
+#: app/routes.py:134
 #, python-format
 msgid "Now, You are following %(username)s."
 msgstr "Ahora, estás siguiendo %(username)s."
 
-#: app/routes.py:139
+#: app/routes.py:145
 msgid "You cannot unfollow yourself"
 msgstr "No puedes dejar de seguirte a ti mismo"
 
-#: app/routes.py:143
+#: app/routes.py:149
 #, python-format
 msgid "You are not following %(username)s"
 msgstr "No estás siguiendo a %(username)s"
 
-#: app/routes.py:155
+#: app/routes.py:161
 msgid "Check your email for the instructions to reset your password"
 msgstr "Revisa tu email para ver las instrucciones para restablecer tu contraseña"
 
-#: app/routes.py:157
+#: app/routes.py:163
 msgid "Reset password"
 msgstr "Restablecer contraseña"
 
-#: app/routes.py:170
+#: app/routes.py:176
 msgid "Your new password has been set"
 msgstr "Su nueva contraseña ha sido establecida"
+
+#: app/translate.py:9
+msgid "Error: the translation service is not configured"
+msgstr "Error: el servicio de traducción no está configurado"
+
+#: app/translate.py:16
+msgid "Error: the translation service failed"
+msgstr "Error: el servicio de traducción ha fallado"
 
 #: app/templates/404.html:4
 msgid "File not found"
@@ -193,10 +201,18 @@ msgstr "Cerrar sesion"
 msgid "Disabled"
 msgstr "Desactivado"
 
+#: app/templates/_layout.html:67
+msgid "Error: Could not contact server"
+msgstr "Error: No se ha podido contactar con el servidor"
+
 #: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s dijo %(when)s"
+
+#: app/templates/_post.html:24
+msgid "Translate"
+msgstr "Traducir"
 
 #: app/templates/index.html:5
 #, python-format
@@ -241,19 +257,19 @@ msgstr "Solicitud de restablecimiento de contraseña"
 
 #: app/templates/user.html:10
 msgid "User"
-msgstr ""
+msgstr "Usuario"
 
 #: app/templates/user.html:15
 msgid "Last seen on"
-msgstr ""
+msgstr "Visto por última vez en"
 
 #: app/templates/user.html:18
 msgid "followers"
-msgstr ""
+msgstr "seguidores"
 
 #: app/templates/user.html:18
 msgid "following"
-msgstr ""
+msgstr "siguiente"
 
 #: app/templates/user.html:22
 #, fuzzy
@@ -262,11 +278,11 @@ msgstr "Editar Perfil"
 
 #: app/templates/user.html:27
 msgid "Follow"
-msgstr ""
+msgstr "Siga"
 
 #: app/templates/user.html:32
 msgid "Unfollow"
-msgstr ""
+msgstr "Dejar de seguir"
 
 #: app/templates/user.html:50
 #, fuzzy

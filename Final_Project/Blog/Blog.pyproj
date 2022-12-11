@@ -58,6 +58,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="app\static\loading.gif" />
     <Content Include="app\templates\500.html" />
     <Content Include="app\templates\404.html" />
     <Content Include="app\templates\edit_profile.html" />
@@ -86,6 +87,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="app\" />
+    <Folder Include="app\static\" />
     <Folder Include="app\templates\" />
     <Folder Include="app\templates\email\" />
   </ItemGroup>

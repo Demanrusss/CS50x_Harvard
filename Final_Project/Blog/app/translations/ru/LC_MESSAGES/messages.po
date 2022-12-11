@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-11 03:01+0600\n"
+"POT-Creation-Date: 2022-12-12 00:12+0600\n"
 "PO-Revision-Date: 2022-12-11 02:12+0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -39,7 +39,7 @@ msgstr "Пароль"
 msgid "Remember me"
 msgstr "Запомни меня"
 
-#: app/forms.py:11 app/routes.py:66 app/templates/login.html:5
+#: app/forms.py:11 app/routes.py:72 app/templates/login.html:5
 msgid "Sign in"
 msgstr "Войти в систему"
 
@@ -51,7 +51,7 @@ msgstr "Email"
 msgid "Confirm password"
 msgstr "Подтвердить пароль"
 
-#: app/forms.py:18 app/routes.py:85 app/templates/register.html:5
+#: app/forms.py:18 app/routes.py:91 app/templates/register.html:5
 msgid "Register"
 msgstr "Зарегистрироваться"
 
@@ -87,68 +87,76 @@ msgstr "Запросить сброс пароля"
 msgid "Set new password"
 msgstr "Установить новый пароль"
 
-#: app/routes.py:28
+#: app/routes.py:34
 msgid "Your post has been published"
 msgstr "Ваш пароль обновлен"
 
-#: app/routes.py:35 app/templates/_layout.html:20
+#: app/routes.py:41 app/templates/_layout.html:20
 msgid "Home"
 msgstr "Главная"
 
-#: app/routes.py:47 app/templates/_layout.html:21
+#: app/routes.py:53 app/templates/_layout.html:21
 msgid "Explore"
 msgstr "Осмотреться"
 
-#: app/routes.py:59
+#: app/routes.py:65
 msgid "Invalid username or password"
 msgstr "Неправильные имя пользователь или пароль"
 
-#: app/routes.py:83
+#: app/routes.py:89
 msgid "Congratulations, you are now a registered user!"
 msgstr "Поздравляем, Вы теперь зарегистрированный пользователь"
 
-#: app/routes.py:109
+#: app/routes.py:115
 msgid "Your changes have been saved"
 msgstr "Ваши изменения сохранены"
 
-#: app/routes.py:114 app/templates/edit_profile.html:5
+#: app/routes.py:120 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Изменить профиль"
 
-#: app/routes.py:121 app/routes.py:136
+#: app/routes.py:127 app/routes.py:142
 #, python-format
 msgid "User %(username)s not found"
 msgstr "Пользователь %(username)s не найден"
 
-#: app/routes.py:124
+#: app/routes.py:130
 msgid "You cannot follow yourself"
 msgstr "Вы не можете подписаться под себя самого"
 
-#: app/routes.py:128
+#: app/routes.py:134
 #, python-format
 msgid "Now, You are following %(username)s."
 msgstr "Теперь Вы подписаны на пользователя %(username)s."
 
-#: app/routes.py:139
+#: app/routes.py:145
 msgid "You cannot unfollow yourself"
 msgstr "Вы не можете отписаться от себя самого"
 
-#: app/routes.py:143
+#: app/routes.py:149
 #, python-format
 msgid "You are not following %(username)s"
 msgstr "Вы не подписаны на пользователя %(username)s"
 
-#: app/routes.py:155
+#: app/routes.py:161
 msgid "Check your email for the instructions to reset your password"
 msgstr "Проверьте свой email для дальнейших инструкция по сбросу вашего пароля"
 
-#: app/routes.py:157
+#: app/routes.py:163
 msgid "Reset password"
 msgstr "Сбросить пароль"
 
-#: app/routes.py:170
+#: app/routes.py:176
 msgid "Your new password has been set"
 msgstr "Ваш новый пароль установлен"
+
+#: app/translate.py:9
+msgid "Error: the translation service is not configured"
+msgstr "Ошибка: служба перевода не настроена"
+
+#: app/translate.py:16
+msgid "Error: the translation service failed"
+msgstr "Ошибка: служба перевода не сработала"
 
 #: app/templates/404.html:4
 msgid "File not found"
@@ -164,9 +172,7 @@ msgstr "Произошла непредвиденная ошибка"
 
 #: app/templates/500.html:5
 msgid "Administrator has been notified about it. Sorry for the inconvenience..."
-msgstr ""
-"Администратор был осведомлен об этом. Просим прощения за предоставленные "
-"неудобства"
+msgstr "Администратор был осведомлен об этом. Просим прощения за предоставленные неудобства"
 
 #: app/templates/_layout.html:5
 msgid "Blog"
@@ -196,10 +202,18 @@ msgstr "Выйти"
 msgid "Disabled"
 msgstr "Отключено"
 
+#: app/templates/_layout.html:67
+msgid "Error: Could not contact server"
+msgstr "Ошибка: Не удалось связаться с сервером"
+
 #: app/templates/_post.html:14
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сказал %(when)s"
+
+#: app/templates/_post.html:24
+msgid "Translate"
+msgstr "Перевести"
 
 #: app/templates/index.html:5
 #, python-format
@@ -244,19 +258,19 @@ msgstr " Запрос на сброс пароля"
 
 #: app/templates/user.html:10
 msgid "User"
-msgstr ""
+msgstr "Пользователь"
 
 #: app/templates/user.html:15
 msgid "Last seen on"
-msgstr ""
+msgstr "Последний раз замечен"
 
 #: app/templates/user.html:18
 msgid "followers"
-msgstr ""
+msgstr "подписичики"
 
 #: app/templates/user.html:18
 msgid "following"
-msgstr ""
+msgstr "подписки"
 
 #: app/templates/user.html:22
 #, fuzzy
@@ -265,11 +279,11 @@ msgstr "Изменить профиль"
 
 #: app/templates/user.html:27
 msgid "Follow"
-msgstr ""
+msgstr "Подписаться"
 
 #: app/templates/user.html:32
 msgid "Unfollow"
-msgstr ""
+msgstr "Отписаться"
 
 #: app/templates/user.html:50
 #, fuzzy
