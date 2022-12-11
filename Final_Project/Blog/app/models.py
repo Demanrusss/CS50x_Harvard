@@ -77,6 +77,7 @@ class Post(db.Model):
     body = db.Column(db.String(140))
     timestamp = db.Column(db.DateTime, index = True, default = datetime.utcnow)
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+    language = db.Column(db.String(8))
 
     def __repr__(self):
         return '<Post {}>'.format(self.body)
@@ -84,3 +85,14 @@ class Post(db.Model):
 @login.user_loader
 def load_user(id):
     return User.query.get(int(id))
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                                   #
+# In order to use migration                                         #
+# $ set FLASK_APP=blog.py                                           #
+# $ python -m flask db migrate -m "some message"                    #
+#                                                                   #
+# Upgrading DB                                                      #
+# $ python -m flask db upgrade                                      #
+#                                                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #

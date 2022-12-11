@@ -6,11 +6,18 @@
             </a>
         </td>
         <td>
+            {% set link_of_user %}
             <a href="{{ url_for('user', username = post.author.username) }}">
                 {{ post.author.username }}
             </a>
-            said {{ moment(post.timestamp).fromNow() }}:<br>
+            {% endset %}
+            {{ _('%(username)s said %(when)s', username = link_of_user, when = moment(post.timestamp).fromNow()) }}
+            <br>
             {{ post.body }}
+            {% if post.language and post.language != g.locale %}
+            <br>
+            <a href="#">{{ _('Translate') }}</a>
+            {% endif %}
         </td>
     </tr>
 </table>

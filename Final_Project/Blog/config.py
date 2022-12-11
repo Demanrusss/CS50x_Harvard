@@ -14,3 +14,6 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['deman.russs@gmail.com']
+    LANGUAGES = ['en', 'ru', 'es']
+    TRANSLATOR_KEY = os.environ.get('TRANSLATOR_KEY')
+    # TRANSLATOR_KEY = os.environ.get('cb7fa33a-eeb1-52a4-c914-c2cf6a260e95:fx') --> Deepl.com

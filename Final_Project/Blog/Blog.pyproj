@@ -40,6 +40,9 @@
     <Compile Include="app\models.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\translate.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="blog.py" />
     <Compile Include="app\routes.py">
       <SubType>Code</SubType>

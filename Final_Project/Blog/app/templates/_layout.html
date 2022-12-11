@@ -2,29 +2,30 @@
 
 {% block title %}
     {% if title %}
-{{ title }} - Blog
+        {{ title }} - {{ _('Blog') }}
     {% else %}
-        Welcome to Blog!
+        {{ _('Welcome to Blog') }}!
     {% endif %}
 {% endblock%}
 
 {% block navbar %}
 <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
-        <a class="navbar-brand" href="#">Navbar</a>
+        <a class="navbar-brand" href="#">{{ _('Navigation') }}</a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-                <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">Home</a>
-                <a class="nav-link" href="{{ url_for('explore') }}">Explore</a>
+                <a class="nav-link active" aria-current="page" href="{{ url_for('index') }}">{{ _('Home') }}</a>
+                <a class="nav-link" href="{{ url_for('explore') }}">{{ _('Explore') }}</a>
                 {% if current_user.is_anonymous %}
-                <a class="nav-link" href="{{ url_for('login') }}">Login</a>
+                <a class="nav-link" href="{{ url_for('login') }}">{{ _('Login') }}</a>
                 {% else %}
-                <a class="nav-link" href="{{ url_for('user', username = current_user.username) }}">Profile</a>
-                <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
-                <a class="nav-link disabled">Disabled</a>
+                <a class="nav-link" href="{{ url_for('user', username = current_user.username) }}">{{ _('Profile') }}</a>
+                <a class="nav-link" href="{{ url_for('logout') }}">{{ _('Logout') }}</a>
+                {% endif %}
+                <a class="nav-link disabled">{{ _('Disabled') }}</a>
             </div>
         </div>
     </div>
@@ -51,5 +52,5 @@
 {% block scripts %}
     {{ super() }}
     {{ moment.include_moment() }}
-    {{ moment.lang('en') }}
+    {{ moment.lang(g.locale) }}
 {% endblock %}

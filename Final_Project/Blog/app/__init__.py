@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request
 from config import Config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
@@ -9,6 +9,7 @@ import os
 from flask_mail import Mail
 from flask_bootstrap import Bootstrap
 from flask_moment import Moment
+from flask_babel import Babel, lazy_gettext as _babel
 
 app = Flask(__name__)
 app.config.from_object(Config)
@@ -16,10 +17,11 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 login = LoginManager(app)
 login.login_view = 'login'
-login.login_message = 'To view this page, please, log in first'
+login.login_message = _babel('To view this page, please, log in first')
 mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
+babel = Babel(app)
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
@@ -48,22 +50,46 @@ if not app.debug:
     app.logger.setLevel(logging.INFO)
     app.logger.info('Blog startup')
 
+@babel.localeselector
+def get_locale():
+    return request.accept_languages.best_match(app.config['LANGUAGES'])
+
 from app import routes, models, errors
 
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
-#                                                               #
-# In order to test mail.server by python                        #
-#                                                               #
-# $ python -m smtpd -n -c DebuggingServer localhost:8025        #
-# $ export/set(for windows) MAIL_SERVER=localhost               #
-# $ export/set(for windows) MAIL_PORT=8025                      #
-#                                                               #
-# OR                                                            #
-#                                                               #
-# $ export/set(for windows) MAIL_SERVER=smtp.googlemail.com     #
-# $ export/set(for windows) MAIL_PORT=587                       #
-# $ export/set(for windows) MAIL_USE_TLS=1                      #
-# $ export/set(for windows) MAIL_USERNAME=<gmail-username>      #
-# $ export/set(for windows) MAIL_PASSWORD=<gmail-password>      #
-#                                                               #
-# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                                   #
+# In order to test mail.server by python                            #
+#                                                                   #
+# $ python -m smtpd -n -c DebuggingServer localhost:8025            #
+# $ export/set(for windows) MAIL_SERVER=localhost                   #
+# $ export/set(for windows) MAIL_PORT=8025                          #
+#                                                                   #
+# OR                                                                #
+#                                                                   #
+# $ export/set(for windows) MAIL_SERVER=smtp.googlemail.com         #
+# $ export/set(for windows) MAIL_PORT=587                           #
+# $ export/set(for windows) MAIL_USE_TLS=1                          #
+# $ export/set(for windows) MAIL_USERNAME=<gmail-username>          #
+# $ export/set(for windows) MAIL_PASSWORD=<gmail-password>          #
+#                                                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
+#                                                                   #
+# In terms of using flask-babel here are some useful commands:      #
+#                                                                   #
+# Extracting every message for translation (and updating)           #
+# $ pybabel extract -F babel.cfg -k _babel -o messages.pot .        #
+# $ pybabel update -i messages.pot -d app/translations              #
+#                                                                   #
+# Creating a file for every needed language                         #
+# $ pybabel init -m messages.pot -d app/translations -l ru          #
+#   creating catalog app/translations/ru/LC_MESSAGES/messages.po    #
+#   based on messages.pot                                           #
+#                                                                   #
+# Compiling translation to the application                          #
+# $ pybabel compile -d app/translations                             #
+#   compiling catalog app/translations/ru/LC_MESSAGES/messages.po   #
+#   to app/translations/ru/LC_MESSAGES/messages.mo                  #
+#                                                                   #
+# # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # # #
