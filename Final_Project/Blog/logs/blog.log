@@ -41,3 +41,7 @@ Traceback (most recent call last):
 jinja2.exceptions.UndefinedError: 'form' is undefined
 2022-12-12 00:36:13,030 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:51]
 2022-12-12 00:36:41,547 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:51]
+2022-12-12 23:27:49,160 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-12 23:36:34,802 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-12 23:39:34,750 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-12 23:41:18,604 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]

@@ -15,7 +15,7 @@
                 <p>{{ _('Last seen on') }}: {{ moment(user.last_seen).format('LLL') }}</p>
                 {% endif %}
                 <p>
-                    {{ user.followers.count() }} {{ _('followers') }}, {{ user.followed.count() }} {{ _('following') }}.
+                    {{ _('followers') }}: {{ user.followers.count() }}, {{ _('following') }}: {{ user.followed.count() }}.
                 </p>
                 {% if user == current_user %}
                 <p>
