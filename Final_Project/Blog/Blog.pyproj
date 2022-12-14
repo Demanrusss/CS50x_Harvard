@@ -40,6 +40,9 @@
     <Compile Include="app\models.py">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="app\search.py">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="app\translate.py">
       <SubType>Code</SubType>
     </Compile>
@@ -69,6 +72,7 @@
     <Content Include="app\templates\register.html" />
     <Content Include="app\templates\reset_password.html" />
     <Content Include="app\templates\reset_password_request.html" />
+    <Content Include="app\templates\search.html" />
     <Content Include="app\templates\user.html" />
     <Content Include="app\templates\_layout.html" />
     <Content Include="app\templates\_post.html" />

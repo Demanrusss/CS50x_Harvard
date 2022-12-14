@@ -18,3 +18,4 @@ class Config(object):
     TRANSLATOR_KEY = os.environ.get('TRANSLATOR_KEY')
     # TRANSLATOR_KEY = os.environ.get('cb7fa33a-eeb1-52a4-c914-c2cf6a260e95:fx') --> Deepl.com
     ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
+    #ELASTICSEARCH_URL = 'http://localhost:9200'

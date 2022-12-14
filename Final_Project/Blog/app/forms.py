@@ -1,3 +1,4 @@
+from flask import request
 from flask_wtf import FlaskForm
 from flask_babel import _, lazy_gettext as _babel
 from wtforms import StringField, PasswordField, BooleanField, SubmitField, TextAreaField
@@ -58,3 +59,13 @@ class ResetPasswordForm(FlaskForm):
     confirm = PasswordField(_babel('Confirm password'), 
                             validators=[DataRequired(), EqualTo('password')])
     submit = SubmitField(_babel('Set new password'))
+
+class SearchForm(FlaskForm):
+    q = StringField(_('Search'), validators = [DataRequired()])
+
+    def __init__(self, *args, **kwargs):
+        if 'formdata' not in kwargs:
+            kwargs['formdata'] = request.args
+        if 'csrf_enabled' not in kwargs:
+            kwargs['csrf_enabled'] = False
+        super(SearchForm, self).__init__(*args, **kwargs)

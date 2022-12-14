@@ -1,10 +1,11 @@
 from datetime import datetime
-from flask import render_template, flash, redirect, url_for, request, g, jsonify
+from flask import render_template, flash, redirect, url_for, request, g, jsonify, current_app
 from flask_babel import _, get_locale
 from flask_login import current_user, login_user, logout_user, login_required
 from app import app, db
-from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm,\
-                      EmptyForm, ResetPasswordRequestForm, ResetPasswordForm
+from app.forms import LoginForm, RegistrationForm, EditProfileForm, PostForm, \
+                      EmptyForm, ResetPasswordRequestForm, ResetPasswordForm, \
+                      SearchForm
 from app.models import User, Post
 from app.translate import translate
 from werkzeug.urls import url_parse
@@ -16,7 +17,8 @@ def before_request():
     if current_user.is_authenticated:
         current_user.last_seen = datetime.utcnow()
         db.session.commit()
-        g.locale = str(get_locale())
+        g.search_form = SearchForm()
+    g.locale = str(get_locale())
 
 @app.route('/', methods = ['GET', 'POST'])
 @app.route('/index', methods = ['GET', 'POST'])
@@ -183,3 +185,18 @@ def translate_text():
     return jsonify({'text': translate(request.form['text'],
                                       request.form['source_language'],
                                       request.form['dest_language'])})
+
+@app.route('/search')
+@login_required
+def search():
+    if not g.search_form.validate():
+        return redirect(url_for('explore'))
+    page = request.args.get('page', 1, type = int)
+    posts, total = Post.search(g.search_form.q.data, page, 
+                               current_app.config['POSTS_PER_PAGE'])
+    next_page = url_for('search', q = g.search_form.q.data, page = page + 1) \
+        if total > page * current_app.config['POST_PER_PAGE'] else None
+    prev_page = url_for('search', q = g.search_form.q.data, page = page - 1) \
+        if page > 1 else None
+    return render_template('search.html', title = _('Search'), posts = posts, 
+                           next_page = next_page, prev_page = prev_page)
