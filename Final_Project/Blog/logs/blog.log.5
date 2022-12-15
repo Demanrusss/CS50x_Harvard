@@ -1,0 +1,111 @@
+2022-12-04 15:28:10,476 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 15:28:32,485 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 15:28:54,776 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 21:54:47,643 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 21:58:04,538 ERROR: Exception on /index [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 27, in index
+    posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
+TypeError: paginate() takes 1 positional argument but 4 were given
+2022-12-04 21:59:18,831 ERROR: Exception on /explore [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 38, in explore
+    posts = Post.query.order_by(Post.timestamp.desc())\
+TypeError: paginate() takes 1 positional argument but 4 were given
+2022-12-04 22:00:40,437 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 22:01:01,979 ERROR: Exception on / [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 27, in index
+    posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
+TypeError: paginate() takes 1 positional argument but 4 were given
+2022-12-04 22:01:24,353 ERROR: Exception on /index [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 27, in index
+    posts = current_user.followed_posts().paginate(page, app.config['POSTS_PER_PAGE'], False)
+TypeError: paginate() takes 1 positional argument but 4 were given
+2022-12-04 22:03:18,145 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 22:05:55,696 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 22:14:03,250 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 22:15:25,578 ERROR: Exception on /index [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 31, in index
+    return render_template('index.html', title = 'Home',
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\index.html", line 1, in top-level template code
+    {% extends "_layout.html" %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\_layout.html", line 38, in top-level template code
+    {% block content %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\index.html", line 21, in block 'content'
+    {% include '_post.html' %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\_post.html", line 3, in top-level template code
+    <td><img src="{{ user.avatar(32) }}"></td>
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'user' is undefined
+2022-12-04 22:16:42,914 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-04 22:26:32,884 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:42]
+2022-12-09 21:23:47,255 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
+2022-12-09 21:24:20,116 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
+2022-12-09 21:26:47,196 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
+2022-12-09 21:31:43,053 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:44]
+2022-12-09 23:16:35,265 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:49]
+2022-12-09 23:17:33,843 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:49]
+2022-12-09 23:18:20,349 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:49]
+2022-12-11 02:53:15,123 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:51]
