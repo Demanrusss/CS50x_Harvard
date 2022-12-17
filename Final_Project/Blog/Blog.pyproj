@@ -73,6 +73,7 @@
     <Content Include="app\templates\reset_password.html" />
     <Content Include="app\templates\reset_password_request.html" />
     <Content Include="app\templates\search.html" />
+    <Content Include="app\templates\user_popup.html" />
     <Content Include="app\templates\user.html" />
     <Content Include="app\templates\_layout.html" />
     <Content Include="app\templates\_post.html" />

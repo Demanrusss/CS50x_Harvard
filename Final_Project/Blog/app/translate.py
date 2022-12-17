@@ -32,5 +32,6 @@ def translate(text, source_language, dest_language):
             return _('Error: the translation service failed') + \
                 '. Status code: {}'.format(response.status_code)
         r = json.loads(response.text)
-    return r[0]["translations"][0]["text"]
+        return r[0]["translations"][0]["text"]
+    return response.text
     
