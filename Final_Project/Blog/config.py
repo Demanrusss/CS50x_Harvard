@@ -18,5 +18,5 @@ class Config(object):
     # --> Google, Microsoft Translate through RapidAPI.com
     TRANSLATOR_KEY = os.environ.get('TRANSLATOR_KEY') or \
         '9bc694957dmsh9021abeb4375ec0p150998jsnef4cde8cffb6'
-    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL')
-#        'http://localhost:9200'
+    ELASTICSEARCH_URL = os.environ.get('ELASTICSEARCH_URL') or \
+        'http://localhost:9200'
