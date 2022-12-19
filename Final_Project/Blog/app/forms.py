@@ -47,7 +47,7 @@ class EmptyForm(FlaskForm):
     submit = SubmitField('Submit')
 
 class PostForm(FlaskForm):
-    post = TextAreaField(_babel('Say something'), validators=[DataRequired(), Length(min = 1, max = 140)])
+    post = TextAreaField(_babel('Say something'), validators=[DataRequired(), Length(min = 1, max = 500)])
     submit = SubmitField()
 
 class ResetPasswordRequestForm(FlaskForm):
@@ -61,7 +61,7 @@ class ResetPasswordForm(FlaskForm):
     submit = SubmitField(_babel('Set new password'))
 
 class SearchForm(FlaskForm):
-    q = StringField(_('Search'), validators = [DataRequired()])
+    q = StringField(_babel('Search'), validators = [DataRequired()])
 
     def __init__(self, *args, **kwargs):
         if 'formdata' not in kwargs:

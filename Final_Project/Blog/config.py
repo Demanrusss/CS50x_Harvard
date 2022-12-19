@@ -14,7 +14,7 @@ class Config(object):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     ADMINS = ['deman.russs@gmail.com']
-    LANGUAGES = ['en', 'es', 'ru']
+    LANGUAGES = ['en', 'es', 'ru', 'fr']
     # --> Google, Microsoft Translate through RapidAPI.com
     TRANSLATOR_KEY = os.environ.get('TRANSLATOR_KEY') or \
         '9bc694957dmsh9021abeb4375ec0p150998jsnef4cde8cffb6'

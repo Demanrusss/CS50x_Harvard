@@ -1,0 +1,83 @@
+2022-12-12 00:26:02,766 ERROR: Exception on /user/Demanrusss [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 103, in user
+    return render_template('user.html', user = user, posts = posts.items,
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\user.html", line 1, in top-level template code
+    {% extends "_layout.html" %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\_layout.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\_layout.html", line 47, in block 'content'
+    {% block app_content %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\user.html", line 26, in block 'app_content'
+    {{ form.hidden_tag() }}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2022-12-12 00:26:41,169 ERROR: Exception on /user/Demanrusss [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 103, in user
+    return render_template('user.html', user = user, posts = posts.items,
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\templating.py", line 147, in render_template
+    return _render(app, template, context)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\templating.py", line 130, in _render
+    rv = template.render(context)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 1301, in render
+    self.environment.handle_exception()
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 936, in handle_exception
+    raise rewrite_traceback_stack(source=source)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\user.html", line 1, in top-level template code
+    {% extends "_layout.html" %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\_layout.html", line 1, in top-level template code
+    {% extends "bootstrap/base.html" %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 1, in top-level template code
+    {% block doc -%}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 4, in block 'doc'
+    {%- block html %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 20, in block 'html'
+    {% block body -%}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_bootstrap\templates\bootstrap\base.html", line 23, in block 'body'
+    {% block content -%}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\_layout.html", line 47, in block 'content'
+    {% block app_content %}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\templates\user.html", line 26, in block 'app_content'
+    {{ form.hidden_tag() }}
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\jinja2\environment.py", line 485, in getattr
+    return getattr(obj, attribute)
+jinja2.exceptions.UndefinedError: 'form' is undefined
+2022-12-12 00:28:39,940 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:51]

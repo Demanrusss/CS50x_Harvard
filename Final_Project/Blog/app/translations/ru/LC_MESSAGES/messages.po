@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2022-12-12 00:12+0600\n"
+"POT-Creation-Date: 2022-12-20 00:56+0600\n"
 "PO-Revision-Date: 2022-12-11 02:12+0600\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ru\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.11.0\n"
 
-#: app/__init__.py:20
+#: app/__init__.py:21
 msgid "To view this page, please, log in first"
 msgstr "Чтобы посмотреть эту страницу, сначала войдите"
 
@@ -27,134 +27,139 @@ msgstr "Чтобы посмотреть эту страницу, сначала 
 msgid "[Blog] Reset your password"
 msgstr "[Блог] Сбросить ваш пароль"
 
-#: app/forms.py:8 app/forms.py:14 app/forms.py:31
+#: app/forms.py:9 app/forms.py:15 app/forms.py:32
 msgid "Username"
 msgstr "Пользователь"
 
-#: app/forms.py:9 app/forms.py:16 app/forms.py:54
+#: app/forms.py:10 app/forms.py:17 app/forms.py:58
 msgid "Password"
 msgstr "Пароль"
 
-#: app/forms.py:10
+#: app/forms.py:11
 msgid "Remember me"
 msgstr "Запомни меня"
 
-#: app/forms.py:11 app/routes.py:72 app/templates/login.html:5
+#: app/forms.py:12 app/routes.py:73 app/templates/login.html:5
 msgid "Sign in"
 msgstr "Войти в систему"
 
-#: app/forms.py:15 app/forms.py:50
+#: app/forms.py:16 app/forms.py:54
 msgid "Email"
 msgstr "Email"
 
-#: app/forms.py:17 app/forms.py:55
+#: app/forms.py:18 app/forms.py:59
 msgid "Confirm password"
 msgstr "Подтвердить пароль"
 
-#: app/forms.py:18 app/routes.py:91 app/templates/register.html:5
+#: app/forms.py:19 app/routes.py:92 app/templates/register.html:5
 msgid "Register"
 msgstr "Зарегистрироваться"
 
-#: app/forms.py:23
+#: app/forms.py:24
 msgid "Such username is already registered"
 msgstr "Такой пользователь уже зарегистрирован"
 
-#: app/forms.py:28
+#: app/forms.py:29
 msgid "Such email is already used"
 msgstr "Такой email уже используется"
 
-#: app/forms.py:32
+#: app/forms.py:33
 msgid "About me"
 msgstr "Обо мне"
 
-#: app/forms.py:33
+#: app/forms.py:34
 msgid "Submit"
 msgstr "Отправить"
 
-#: app/forms.py:43
+#: app/forms.py:44
 msgid "This username already exists"
 msgstr "Этот пользователь уже существует"
 
-#: app/forms.py:46
+#: app/forms.py:50
 msgid "Say something"
 msgstr "Скажите что-нибудь"
 
-#: app/forms.py:51
+#: app/forms.py:55
 msgid "Request password reset"
 msgstr "Запросить сброс пароля"
 
-#: app/forms.py:57
+#: app/forms.py:61
 msgid "Set new password"
 msgstr "Установить новый пароль"
 
-#: app/routes.py:34
-msgid "Your post has been published"
-msgstr "Ваш пароль обновлен"
+#: app/forms.py:64 app/routes.py:206
+#, fuzzy
+msgid "Search"
+msgstr "Поиск"
 
-#: app/routes.py:41 app/templates/_layout.html:20
+#: app/routes.py:35
+msgid "Your post has been published"
+msgstr "Ваш пост юыл опубликован"
+
+#: app/routes.py:42 app/templates/_layout.html:25
 msgid "Home"
 msgstr "Главная"
 
-#: app/routes.py:53 app/templates/_layout.html:21
+#: app/routes.py:54 app/templates/_layout.html:26
 msgid "Explore"
 msgstr "Осмотреться"
 
-#: app/routes.py:65
+#: app/routes.py:66
 msgid "Invalid username or password"
 msgstr "Неправильные имя пользователь или пароль"
 
-#: app/routes.py:89
+#: app/routes.py:90
 msgid "Congratulations, you are now a registered user!"
 msgstr "Поздравляем, Вы теперь зарегистрированный пользователь"
 
-#: app/routes.py:115
+#: app/routes.py:124
 msgid "Your changes have been saved"
 msgstr "Ваши изменения сохранены"
 
-#: app/routes.py:120 app/templates/edit_profile.html:5
+#: app/routes.py:129 app/templates/edit_profile.html:5
 msgid "Edit Profile"
 msgstr "Изменить профиль"
 
-#: app/routes.py:127 app/routes.py:142
+#: app/routes.py:136 app/routes.py:151
 #, python-format
 msgid "User %(username)s not found"
 msgstr "Пользователь %(username)s не найден"
 
-#: app/routes.py:130
+#: app/routes.py:139
 msgid "You cannot follow yourself"
 msgstr "Вы не можете подписаться под себя самого"
 
-#: app/routes.py:134
+#: app/routes.py:143
 #, python-format
 msgid "Now, You are following %(username)s."
 msgstr "Теперь Вы подписаны на пользователя %(username)s."
 
-#: app/routes.py:145
+#: app/routes.py:154
 msgid "You cannot unfollow yourself"
 msgstr "Вы не можете отписаться от себя самого"
 
-#: app/routes.py:149
+#: app/routes.py:158
 #, python-format
 msgid "You are not following %(username)s"
 msgstr "Вы не подписаны на пользователя %(username)s"
 
-#: app/routes.py:161
+#: app/routes.py:170
 msgid "Check your email for the instructions to reset your password"
 msgstr "Проверьте свой email для дальнейших инструкция по сбросу вашего пароля"
 
-#: app/routes.py:163
+#: app/routes.py:172
 msgid "Reset password"
 msgstr "Сбросить пароль"
 
-#: app/routes.py:176
+#: app/routes.py:185
 msgid "Your new password has been set"
 msgstr "Ваш новый пароль установлен"
 
-#: app/translate.py:9
+#: app/translate.py:8
 msgid "Error: the translation service is not configured"
 msgstr "Ошибка: служба перевода не настроена"
 
-#: app/translate.py:16
+#: app/translate.py:32
 msgid "Error: the translation service failed"
 msgstr "Ошибка: служба перевода не сработала"
 
@@ -180,38 +185,34 @@ msgstr "Блог"
 
 #: app/templates/_layout.html:7
 msgid "Welcome to Blog"
-msgstr "Доро пожаловать в Блог"
+msgstr "Добро пожаловать в Блог"
 
-#: app/templates/_layout.html:14
+#: app/templates/_layout.html:21
 msgid "Navigation"
 msgstr "Навигация"
 
-#: app/templates/_layout.html:23
+#: app/templates/_layout.html:37
 msgid "Login"
 msgstr "Войти"
 
-#: app/templates/_layout.html:25
+#: app/templates/_layout.html:39
 msgid "Profile"
 msgstr "Профиль"
 
-#: app/templates/_layout.html:26
+#: app/templates/_layout.html:40
 msgid "Logout"
 msgstr "Выйти"
 
-#: app/templates/_layout.html:28
-msgid "Disabled"
-msgstr "Отключено"
-
-#: app/templates/_layout.html:67
+#: app/templates/_layout.html:80
 msgid "Error: Could not contact server"
 msgstr "Ошибка: Не удалось связаться с сервером"
 
-#: app/templates/_post.html:14
+#: app/templates/_post.html:16
 #, python-format
 msgid "%(username)s said %(when)s"
 msgstr "%(username)s сказал %(when)s"
 
-#: app/templates/_post.html:24
+#: app/templates/_post.html:26
 msgid "Translate"
 msgstr "Перевести"
 
@@ -256,19 +257,31 @@ msgstr "Сбросить пароль"
 msgid "Reset password request"
 msgstr " Запрос на сброс пароля"
 
+#: app/templates/search.html:4
+msgid "Search results"
+msgstr "Результаты поиска"
+
+#: app/templates/search.html:12
+msgid "Previous results"
+msgstr "Предыдущие результаты"
+
+#: app/templates/search.html:17
+msgid "Next results"
+msgstr "Следующие результаты"
+
 #: app/templates/user.html:10
 msgid "User"
 msgstr "Пользователь"
 
-#: app/templates/user.html:15
+#: app/templates/user.html:15 app/templates/user_popup.html:17
 msgid "Last seen on"
 msgstr "Последний раз замечен"
 
-#: app/templates/user.html:18
+#: app/templates/user.html:18 app/templates/user_popup.html:20
 msgid "followers"
 msgstr "подписичики"
 
-#: app/templates/user.html:18
+#: app/templates/user.html:18 app/templates/user_popup.html:21
 msgid "following"
 msgstr "подписки"
 
@@ -277,11 +290,11 @@ msgstr "подписки"
 msgid "Edit your profile"
 msgstr "Изменить профиль"
 
-#: app/templates/user.html:27
+#: app/templates/user.html:27 app/templates/user_popup.html:27
 msgid "Follow"
 msgstr "Подписаться"
 
-#: app/templates/user.html:32
+#: app/templates/user.html:32 app/templates/user_popup.html:32
 msgid "Unfollow"
 msgstr "Отписаться"
 
@@ -289,4 +302,7 @@ msgstr "Отписаться"
 #, fuzzy
 msgid "Older posts"
 msgstr "Старые посты"
+
+#~ msgid "Disabled"
+#~ msgstr "Отключено"
 

@@ -23,8 +23,8 @@ mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 babel = Babel(app)
-app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
-    if app.config['ELASTICSEARCH_URL'] else None
+app.elasticsearch = Elasticsearch('http://localhost:9200')#[app.config['ELASTICSEARCH_URL']]) \
+#    if app.config['ELASTICSEARCH_URL'] else None
 
 if not app.debug:
     if app.config['MAIL_SERVER']:
@@ -86,7 +86,7 @@ from app import routes, models, errors
 # $ pybabel update -i messages.pot -d app/translations              #
 #                                                                   #
 # Creating a file for every needed language                         #
-# $ pybabel init -m messages.pot -d app/translations -l ru          #
+# $ pybabel init -i messages.pot -d app/translations -l ru          #
 #   creating catalog app/translations/ru/LC_MESSAGES/messages.po    #
 #   based on messages.pot                                           #
 #                                                                   #
