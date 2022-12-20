@@ -2,72 +2,76 @@
 
 {% block title %}
     {% if title %}
-        {{ title }} - {{ _('Blog') }}
+{{ title }} - {{ _('Blog') }}
     {% else %}
-        {{ _('Welcome to Blog') }}!
+{{ _('Welcome to Blog') }}!
     {% endif %}
 {% endblock%}
 
+{% block body_attribs %}
+    background="../static/background.jpg"
+{% endblock body_attribs %}
+
 {% block navbar %}
-    <nav class="navbar">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar">---</span>
-                    <span class="icon-bar">---</span>
-                    <span class="icon-bar">---</span>
-                </button>
-                <a class="navbar-brand" href="{{ url_for('index') }}">{{ _('Navigation') }}</a>
-            </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
-                    <li><a href="{{ url_for('explore') }}">{{ _('Explore') }}</a></li>
-                </ul>
-                {% if g.search_form %}
-                <form class="navbar-form navbar-left" method="get" action="{{ url_for('search') }}">
-                    <div class="form-group">
-                        {{ g.search_form.q(size=60, class='form-control', placeholder=g.search_form.q.label.text) }}
-                    </div>
-                </form>
-                {% endif %}
-                <ul class="nav navbar-nav navbar-right">
-                    {% if current_user.is_anonymous %}
-                    <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
-                    {% else %}
-                    <li><a href="{{ url_for('user', username = current_user.username) }}">{{ _('Profile') }}</a></li>
-                    <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
-                    {% endif %}
-                </ul>
-            </div>
+<nav class="navbar">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar">---</span>
+                <span class="icon-bar">---</span>
+                <span class="icon-bar">---</span>
+            </button>
+            <a class="navbar-brand" href="{{ url_for('index') }}">{{ _('Navigation') }}</a>
         </div>
-    </nav>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="{{ url_for('index') }}">{{ _('Home') }}</a></li>
+                <li><a href="{{ url_for('explore') }}">{{ _('Explore') }}</a></li>
+            </ul>
+            {% if g.search_form %}
+            <form class="navbar-form navbar-left" method="get" action="{{ url_for('search') }}">
+                <div class="form-group">
+                    {{ g.search_form.q(size=60, class='form-control', placeholder=g.search_form.q.label.text) }}
+                </div>
+            </form>
+            {% endif %}
+            <ul class="nav navbar-nav navbar-right">
+                {% if current_user.is_anonymous %}
+                <li><a href="{{ url_for('login') }}">{{ _('Login') }}</a></li>
+                {% else %}
+                <li><a href="{{ url_for('user', username = current_user.username) }}">{{ _('Profile') }}</a></li>
+                <li><a href="{{ url_for('logout') }}">{{ _('Logout') }}</a></li>
+                {% endif %}
+            </ul>
+        </div>
+    </div>
+</nav>
 {% endblock %}
 
 {% block content %}
-    <div class="container">
-        {% with messages = get_flashed_messages() %}
-        {% if messages %}
-            {% for message in messages %}
-            <div class="alert alert-info" role="alert">
-                {{ message }}
-            </div>
-            {% endfor %}
-        {% endif %}
-        {% endwith %}
-
-        {% block app_content %}
-
-        {% endblock %}
+<div class="container">
+    {% with messages = get_flashed_messages() %}
+    {% if messages %}
+    {% for message in messages %}
+    <div class="alert alert-info" role="alert">
+        {{ message }}
     </div>
+    {% endfor %}
+    {% endif %}
+    {% endwith %}
+
+    {% block app_content %}
+
+    {% endblock %}
+</div>
 {% endblock %}
 
 {% block scripts %}
-    {{ super() }}
-    {{ moment.include_moment() }}
-    {{ moment.lang(g.locale) }}
-    <script>
+{{ super() }}
+{{ moment.include_moment() }}
+{{ moment.lang(g.locale) }}
+<script>
         function translate(sourceElement, destElement, sourceLanguage, destLanguage) {
             $(destElement).html('<img src="{{ url_for('static', filename='loading.gif') }}" width="50" height="50">')
             $.post('/translate', {
@@ -120,5 +124,5 @@
                 }
             );
         });
-    </script>
+</script>
 {% endblock %}

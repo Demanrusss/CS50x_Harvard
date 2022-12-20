@@ -23,8 +23,8 @@ mail = Mail(app)
 bootstrap = Bootstrap(app)
 moment = Moment(app)
 babel = Babel(app)
-app.elasticsearch = Elasticsearch('http://localhost:9200')#[app.config['ELASTICSEARCH_URL']]) \
-#    if app.config['ELASTICSEARCH_URL'] else None
+app.elasticsearch = Elasticsearch([app.config['ELASTICSEARCH_URL']]) \
+    if app.config['ELASTICSEARCH_URL'] else None
 
 if not app.debug:
     if app.config['MAIL_SERVER']:

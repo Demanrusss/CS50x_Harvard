@@ -1,4 +1,4 @@
-2022-12-20 00:19:20,075 ERROR: Exception on /favicon.ico [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+2022-12-20 00:20:16,721 ERROR: Exception on / [GET] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
 Traceback (most recent call last):
   File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\sqlalchemy\engine\base.py", line 1900, in _execute_context
     self.dialect.do_execute(
@@ -66,3 +66,55 @@ FROM user
 WHERE user.id = ?]
 [parameters: (2,)]
 (Background on this error at: https://sqlalche.me/e/14/e3q8)
+2022-12-20 00:27:14,480 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:28:00,209 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:29:47,570 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:32:26,300 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:32:59,725 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:33:14,701 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:33:28,196 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:37:21,557 ERROR: Exception on /translate [POST] [in C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py:1741]
+Traceback (most recent call last):
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 2525, in wsgi_app
+    response = self.full_dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1822, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1820, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\flask\app.py", line 1796, in dispatch_request
+    return self.ensure_sync(self.view_functions[rule.endpoint])(**view_args)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\flask_login\utils.py", line 290, in decorated_view
+    return current_app.ensure_sync(func)(*args, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\routes.py", line 192, in translate_text
+    return jsonify({'text': translate(request.form['text'],
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\app\translate.py", line 17, in translate
+    response = requests.request("POST", url, data = payload, headers = headers)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\requests\api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\requests\sessions.py", line 587, in request
+    resp = self.send(prep, **send_kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\requests\sessions.py", line 701, in send
+    r = adapter.send(request, **kwargs)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\requests\adapters.py", line 489, in send
+    resp = conn.urlopen(
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\urllib3\connectionpool.py", line 703, in urlopen
+    httplib_response = self._make_request(
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\urllib3\connectionpool.py", line 398, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\urllib3\connection.py", line 239, in request
+    super(HTTPConnection, self).request(method, url, body=body, headers=headers)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\http\client.py", line 1279, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\http\client.py", line 1324, in _send_request
+    body = _encode(body, 'body')
+  File "C:\Program Files (x86)\Microsoft Visual Studio\Shared\Python39_64\lib\http\client.py", line 167, in _encode
+    raise UnicodeEncodeError(
+UnicodeEncodeError: 'latin-1' codec can't encode character '\u2014' in position 128: Body ('—') is not valid Latin-1. Use body.encode('utf-8') if you want to send it encoded in UTF-8.
+2022-12-20 00:50:17,229 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 00:53:52,120 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 01:07:04,939 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 01:10:33,938 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 01:11:09,675 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 01:11:36,476 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 21:29:01,145 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-20 21:30:51,403 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
