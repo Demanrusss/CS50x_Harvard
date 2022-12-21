@@ -79,6 +79,7 @@
     <Content Include="app\templates\user.html" />
     <Content Include="app\templates\_layout.html" />
     <Content Include="app\templates\_post.html" />
+    <Content Include="README.md" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
