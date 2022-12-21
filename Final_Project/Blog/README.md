@@ -54,7 +54,7 @@ Here are some tips:
  * Doesn't work? Repeat from the first step.
 There is no answer through the InterNet on that bag.
 
-## The pattern of the whole project is MVC.
+# The pattern of the whole project is like MVC.
 There are:
  * Models in just one file (actually we can easily divide it when really need) [models.py](https://github.com/Demanrusss/CS50x_Harvard/blob/main/Final_Project/Blog/app/models.py)
  * Views. Plenty of them in [templates](https://github.com/Demanrusss/CS50x_Harvard/tree/main/Final_Project/Blog/app/templates) folder
