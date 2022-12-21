@@ -39,3 +39,7 @@ Traceback (most recent call last):
   File "D:\Coding\CS50x_Harvard\Final_Project\Blog\env\lib\site-packages\elastic_transport\_node\_http_urllib3.py", line 199, in perform_request
     raise err from None
 elastic_transport.ConnectionError: Connection error caused by: ConnectionError(Connection error caused by: NewConnectionError(<urllib3.connection.HTTPConnection object at 0x0000014AB5F1C250>: Failed to establish a new connection: [WinError 10061] Подключение не установлено, т.к. конечный компьютер отверг запрос на подключение))
+2022-12-22 00:13:32,390 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-22 00:14:16,181 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-22 00:15:54,661 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
+2022-12-22 00:28:04,941 INFO: Blog startup [in D:\Coding\CS50x_Harvard\Final_Project\Blog\app\__init__.py:54]
