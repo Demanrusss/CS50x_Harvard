@@ -43,7 +43,7 @@ CSS
 JavaScript
 Full addons you can find in the file "[requirements.txt](https://github.com/Demanrusss/CS50x_Harvard/blob/main/Final_Project/Blog/requirements.txt)"
 
-#!!!Attention!!! Problem almost solved
+## !!!Attention!!! Problem almost solved
 This IDE has its prons and cons. The only frustration was that when you start the application in order to test it every
 library in virtual environment became as disconnected from the solution.
 Here are some tips:
@@ -54,13 +54,13 @@ Here are some tips:
  * Doesn't work? Repeat from the first step.
 There is no answer through the InterNet on that bag.
 
-The pattern of the whole project is MVC.
+## The pattern of the whole project is MVC.
 There are:
  * Models in just one file (actually we can easily divide it when really need) [models.py](https://github.com/Demanrusss/CS50x_Harvard/blob/main/Final_Project/Blog/app/models.py)
  * Views. Plenty of them in [templates](https://github.com/Demanrusss/CS50x_Harvard/tree/main/Final_Project/Blog/app/templates) folder
  * Controlers again in just one file [routes.py](https://github.com/Demanrusss/CS50x_Harvard/blob/main/Final_Project/Blog/app/routes.py)
 
-#Also there are additional logic:
+# Also there are additional logic:
  * Sends email to change password in [email.py](https://github.com/Demanrusss/CS50x_Harvard/blob/main/Final_Project/Blog/app/email.py)
  * Error handlers in [errors.py](https://github.com/Demanrusss/CS50x_Harvard/blob/main/Final_Project/Blog/app/errors.py)
  * Search and indices in [search.py](https://github.com/Demanrusss/CS50x_Harvard/blob/main/Final_Project/Blog/app/search.py)
